@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/friends-app/static/css/main.dace6c28.chunk.css",
+    "main.js": "/friends-app/static/js/main.52a3c77a.chunk.js",
+    "main.js.map": "/friends-app/static/js/main.52a3c77a.chunk.js.map",
+    "runtime-main.js": "/friends-app/static/js/runtime-main.9e78b6b5.js",
+    "runtime-main.js.map": "/friends-app/static/js/runtime-main.9e78b6b5.js.map",
+    "static/js/2.37f4515c.chunk.js": "/friends-app/static/js/2.37f4515c.chunk.js",
+    "static/js/2.37f4515c.chunk.js.map": "/friends-app/static/js/2.37f4515c.chunk.js.map",
+    "index.html": "/friends-app/index.html",
+    "static/css/main.dace6c28.chunk.css.map": "/friends-app/static/css/main.dace6c28.chunk.css.map",
+    "static/js/2.37f4515c.chunk.js.LICENSE.txt": "/friends-app/static/js/2.37f4515c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9e78b6b5.js",
+    "static/js/2.37f4515c.chunk.js",
+    "static/css/main.dace6c28.chunk.css",
+    "static/js/main.52a3c77a.chunk.js"
+  ]
+}
