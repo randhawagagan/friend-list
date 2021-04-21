@@ -1,8 +1,12 @@
-import { FETCH_LIST, ADD_FRIEND, ADD_TO_FAVOURITE, DELETE_FRIEND, SEARCH_FRIEND, SORT, ORDER } from "./action";
-
+import { FETCH_LIST, ADD_FRIEND, ADD_TO_FAVOURITE, DELETE_FRIEND, SEARCH_FRIEND, SORT, ORDER, LIST_ORDER, PAGE, PAGINATE } from "./action";
+import { get } from "../utils/storage";
 const initialState = {
     list: [],
-    order: ORDER.N_FAV,
+    paginatedList: [],
+    page: get(PAGE) || 1,
+    hasNextPage: false,
+    hasPreviousPage: false,
+    order: get(LIST_ORDER) || ORDER.N_FAV,
 };
 
 export default function (state = initialState, action) {
@@ -12,10 +16,12 @@ export default function (state = initialState, action) {
         case ADD_TO_FAVOURITE:
         case DELETE_FRIEND:
         case SEARCH_FRIEND:
+        case PAGINATE:
         case SORT:
             return {
                 ...state,
-                list: action.data,
+                ...action.data,
+                list: action.data.list,
             };
         default:
             return state;

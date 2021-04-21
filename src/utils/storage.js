@@ -1,4 +1,4 @@
-const get = (key) => {
+export const get = (key) => {
     return localStorage.getItem(key) || null;
 };
 
@@ -6,14 +6,13 @@ export const getObj = (key) => {
     const string = get(key);
     try {
         const obj = JSON.parse(string);
-        console.log({ key, obj });
         return obj;
     } catch (e) {
         return {};
     }
 };
 
-const set = (key, value) => {
+export const set = (key, value) => {
     return localStorage.setItem(key,value) || null;
 };
 

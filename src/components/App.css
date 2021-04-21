@@ -46,3 +46,14 @@
     width: 374px;
     height: 48px;
 }
+
+.pagination-container {
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pagination-container .arrow {
+    margin: 4px;
+    cursor: pointer;
+}

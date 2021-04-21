@@ -3,16 +3,12 @@ import { connect } from "react-redux";
 import Item from "./../List-Item/List-Item";
 import { fetchList, reOrder } from "../../store/action";
 import Add from "./../Add-Item/Add";
+import Pagination from "./../Pagination/Pagination";
 
 const List = (props) => {
     const { friends } = props;
-
-    console.log({ friends });
     useEffect(() => {
         fetchList();
-        if (friends.list.length > 4) {
-
-        }
     }, []);
 
     const handleSort = () => {
@@ -26,14 +22,10 @@ const List = (props) => {
                 <span className="actions" onClick={handleSort}>⭐</span>
             </div>
             <Add />
-            {friends.list.map((friend) => {
+            {friends.paginatedList.map((friend) => {
                 return <Item key={friend.id} friend={friend} />;
             })}
-            {friends.list.length > 4 &&
-                <h2>
-                    test
-                </h2>
-            }
+            <Pagination />
         </div>
     );
 };
